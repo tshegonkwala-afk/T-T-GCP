@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thandolwethu 💖</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color: white;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.18);
+      padding: 35px;
+      border-radius: 25px;
+      max-width: 380px;
+      backdrop-filter: blur(10px);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+      margin: 15px 0;
+    }
+
+    button {
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .yes {
+      background: white;
+      color: #ff5a8a;
+      font-weight: bold;
+    }
+
+    .no {
+      background: rgba(255,255,255,0.3);
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Thandolwethu 💌</h1>
+
+    <!-- Tenor GIF embedded properly -->
+    <img 
+      src="https://media.tenor.com/8iG6n5E6ZfQAAAAC/minion-ominous.gif" 
+      alt="ominous minion"
+    >
+
+    <p>
+      Would you do me the honour<br>
+      of being my Valentine? 💖
+    </p>
+
+    <button class="yes" onclick="yesClicked()">Yes 💖</button>
+    <button class="no" id="noBtn">No</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - 120);
+      const y = Math.random() * (window.innerHeight - 60);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+
+    function yesClicked() {
+      confetti({
+        particleCount: 200,
+        spread: 90,
+        origin: { y: 0.6 }
+      });
+
+      // Open song in YouTube (100% works on iPhone)
+      window.open(
+        "https://www.youtube.com/watch?v=0W7S0Z7EwYI",
+        "_blank"
+      );
+    }
+  </script>
+
+</body>
+</html>
