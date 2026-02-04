@@ -62,10 +62,8 @@
     <h1>Thandolwethu 💌</h1>
 
     <!-- Tenor GIF embedded properly -->
-    <img 
-      src="https://media.tenor.com/8iG6n5E6ZfQAAAAC/minion-ominous.gif" 
-      alt="ominous minion"
-    >
+    <img src="minion.gif" alt="ominous minion" style="width:100%; border-radius:15px; margin:15px 0;">
+
 
     <p>
       Would you do me the honour<br>
